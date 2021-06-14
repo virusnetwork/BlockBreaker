@@ -867,6 +867,7 @@ GameObject:
   - component: {fileID: 1152703570}
   - component: {fileID: 1152703569}
   - component: {fileID: 1152703568}
+  - component: {fileID: 1152703572}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -970,12 +971,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152703567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.94, y: 4.66, z: 0}
-  m_LocalScale: {x: 0.6524, y: 0.6584925, z: 1}
+  m_LocalPosition: {x: 7.4794, y: 1.1048, z: 0}
+  m_LocalScale: {x: 0.44826403, y: 0.43170768, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1152703572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152703567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31620187d64317e47b10bf7cbf11b7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle1: {fileID: 1660461269}
 --- !u!1 &1660461264
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,6 +1002,7 @@ GameObject:
   - component: {fileID: 1660461265}
   - component: {fileID: 1660461268}
   - component: {fileID: 1660461267}
+  - component: {fileID: 1660461269}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -1054,7 +1069,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660461264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.82, y: 0.7, z: 1}
+  m_LocalPosition: {x: 7.5, y: 0.25, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1114,6 +1129,19 @@ PolygonCollider2D:
       - {x: 1.28, y: -0.32}
       - {x: 1.2691519, y: 0.057456516}
       - {x: 1.0555365, y: 0.14745651}
+--- !u!114 &1660461269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660461264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65078ef5942e84c44a122b00c84b37df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenWidthInUnits: 16
 --- !u!1 &1781846567
 GameObject:
   m_ObjectHideFlags: 0

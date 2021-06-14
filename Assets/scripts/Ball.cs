@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
 
     // state
     Vector2 paddleToBallVector;
+    bool hasStarted = false;
 
     // Use this for initialization
     void Start()
@@ -19,7 +20,20 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LockBallToPaddle();
+        if(!hasStarted)
+        {
+            LockBallToPaddle();
+            LaunchOnMouseClick();
+        } 
+    }
+
+    private void LaunchOnMouseClick()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(2f,15f);
+            hasStarted = true;
+        }
     }
 
     private void LockBallToPaddle()
