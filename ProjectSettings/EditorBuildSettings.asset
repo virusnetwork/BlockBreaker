@@ -9,9 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Start scene.unity
     guid: 1df34ccdd730932458b66cab269a09a7
   - enabled: 1
-    path: Assets/Scenes/Game scene.unity
+    path: Assets/Scenes/Level 1.unity
+    guid: 7b8883975128eb24785a8c487457e985
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
     guid: c21c4e14a8c77e9448e04caac865cc11
   - enabled: 1
     path: Assets/Scenes/Lose scene.unity
     guid: 9c9b745958beea94db525d4a01e6fc67
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b54d4369837294046be4f97eb6992ec0, type: 2}

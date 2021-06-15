@@ -20,18 +20,18 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!hasStarted)
+        if (!hasStarted)
         {
             LockBallToPaddle();
             LaunchOnMouseClick();
-        } 
+        }
     }
 
     private void LaunchOnMouseClick()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(2f,15f);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 15f);
             hasStarted = true;
         }
     }
@@ -40,5 +40,14 @@ public class Ball : MonoBehaviour
     {
         Vector2 paddlePos = new Vector2(paddle1.transform.position.x, paddle1.transform.position.y);
         transform.position = paddlePos + paddleToBallVector;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (hasStarted)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+
     }
 }
