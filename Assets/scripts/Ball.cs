@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour
     {
         if (hasStarted)
         {
-            AudioClip clip = ballSounds[UnityEngine.Random.Range(0,ballSounds.Length)];
+            AudioClip clip = ballSounds[UnityEngine.Random.Range(0,ballSounds.Length-1)];
             GetComponent<AudioSource>().PlayOneShot(clip);
         }
 
